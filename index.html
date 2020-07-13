@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      box-sizing: border-box;
+    }
+
+    .header,
+    .footer {
+      width: 100%;
+      height: 100px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+      width: 1000px;
+      height: 100vh;
+      margin: auto;
+    }
+
+    .side-panel,
+    .main {
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 100px;
+      grid-gap: 0.5rem;
+    }
+
+    .side-panel {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .main {
+      grid-column: span 9;
+      grid-row: span 1;
+    }
+
+    .side-panel h1,
+    .main h1 {
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
+    .cards-to-display {
+      background-color: lightgreen;
+      padding: 10px;
+      border: 1px solid black;
+      margin: 10px 0;
+    }
+
+    ul.countries-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+  </style>
+  <body>
+    <div class="header"></div>
+    <div class="container">
+      <div class="side-panel">
+        <h1>Countries</h1>
+        <div id="result"></div>
+      </div>
+      <div class="main">
+        <h1>Main</h1>
+        <div id="cards"></div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+  <script src="index.js"></script>
+</html>
